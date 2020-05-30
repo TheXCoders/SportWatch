@@ -76,6 +76,7 @@ def getInfosLive(dataDB, comp):
 
     dataArray = list()
     for m in dataDB:
+        rq = requests.get("https://api.fifa.com/api/v1/live/football/2000000000/0/0/{}".format(m[7]))
         noAffiche = False
         homeTeam = m[1]
         awayTeam = m[2]
@@ -91,16 +92,16 @@ def getInfosLive(dataDB, comp):
         timeMatch = 0
 
         if m[6] == 3:
-            timeMatch = m[3] + timedelta(hours=2)
+            timeMatch = str(rq.json()['MatchTime'])
         elif m[6] == 12:
             timeMatch = "Le match va bientôt débuter !"
         else:
             noAffiche = True
 
         if timeMatch == 'None':
-            if m[6] == 4:
+            if rq.json()['Period'] == 4:
                 timeMatch = "Mi-Temps !"
-            elif m[6] == 10:
+            elif rq.json()['Period'] == 10:
                 timeMatch = "Fin du match !"
 
         if not noAffiche:
