@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://sportwatch.cf/</loc>
+  <lastmod>2020-02-08T12:28:39+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://sportwatch.cf/matches/fl1</loc>
+  <lastmod>2020-02-08T12:28:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://sportwatch.cf/matches/cl</loc>
+  <lastmod>2020-02-08T12:28:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://sportwatch.cf/matches/pd</loc>
+  <lastmod>2020-02-08T12:28:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://sportwatch.cf/matches/pl</loc>
+  <lastmod>2020-02-08T12:28:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://sportwatch.cf/matches/bl1</loc>
+  <lastmod>2020-02-08T12:28:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://sportwatch.cf/matches/elc</loc>
+  <lastmod>2020-02-08T12:28:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://sportwatch.cf/matches/sa</loc>
+  <lastmod>2020-02-08T12:28:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://sportwatch.cf/matches/ec</loc>
+  <lastmod>2020-02-08T12:28:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://sportwatch.cf/matches/ppl</loc>
+  <lastmod>2020-02-08T12:28:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://sportwatch.cf/matches/ded</loc>
+  <lastmod>2020-02-08T12:28:39+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>

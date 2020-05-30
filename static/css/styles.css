@@ -1,0 +1,263 @@
+body {
+  overflow-x: hidden;
+  position: relative;
+  font-family: 'Poppins';
+  margin: 0;
+  padding: 0;
+  color: #000;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.ellipse-top-container {
+  width: 100%;
+  height: 200px;
+  overflow-x: hidden;
+  position: relative;
+}
+
+@media (min-width: 1200px) {
+  .ellipse-top {
+    width: 1300px;
+    height: 373px;
+    background: #FDD92A;
+    border-radius: 100%;
+    position: absolute;
+    top: -250px;
+    filter: drop-shadow(0px 5px 25px rgba(0, 0, 0, 0.05));
+  }
+}
+
+@media (max-width: 1199px) {
+  .ellipse-top {
+    width: 1000px;
+    height: 373px;
+    background: #FDD92A;
+    border-radius: 100%;
+    position: absolute;
+    top: -250px;
+    filter: drop-shadow(0px 5px 25px rgba(0, 0, 0, 0.05));
+  }
+}
+
+.ellipse-top h1 {
+  position: absolute;
+  bottom: 40px;
+  font-size: 31px;
+  font-weight: 800;
+}
+
+.ellipse-top a {
+  position: absolute;
+  text-decoration: none;
+  bottom: 40px;
+  font-size: 31px;
+  font-weight: 800;
+  color: #000;
+}
+
+.ellipse-top a i {
+  margin-right: 20px;
+}
+
+@media (min-width: 1900px) {
+  .competitions {
+    width: 70%;
+  }
+}
+
+.competitions {
+  z-index: 10;
+}
+
+.card {
+  width: 280px;
+  height: 330px;
+  border-radius: 20px;
+  margin: 20px;
+  background: #fff;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.16);
+}
+
+.card .img {
+  margin-top: 30px;
+  width: 100%;
+  height: 160px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.card a {
+  margin-top: 75px;
+  background: #D8D8D8;
+  width: 235px;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #535353;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.card a:hover {
+  transition: 0.3s;
+  background: #c8c8c8;
+  color: #434343;
+}
+
+.row {
+  margin-bottom: 52px;
+}
+
+.ellipse-bottom-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+}
+
+.ellipse-bottom {
+  width: 1800px;
+  height: 373px;
+  background: #FDD92A;
+  border-radius: 100%;
+  position: absolute;
+  bottom: -250px;
+  filter: drop-shadow(0px 5px 25px rgba(0, 0, 0, 0.05));
+}
+
+.matches {
+  width: 100%;
+  z-index: 10;
+}
+
+@media (min-width: 1900px) {
+  .matches {
+    width: 60%;
+  }
+}
+
+.match-card {
+  width: 600px;
+  height: 380px;
+  border-radius: 20px;
+  margin: 30px 10px;
+  background: #fff;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.16);
+}
+
+.img-container {
+  width: 100%;
+  height: 160px;
+  margin-top: 20px;
+}
+
+.img-container h1 {
+  margin: 0 20px;
+}
+
+.match-card .img-container .img {
+  width: 40%;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.match-card h1 {
+  font-size: 22px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.match-card h2 {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.match-card a {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  background: #D8D8D8;
+  width: 235px;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #535353;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.match-card a:hover {
+  transition: 0.3s;
+  background: #c8c8c8;
+  color: #434343;
+}
+
+.competition-title {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+img {
+  height: 112px;
+}
+
+.score h5 {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.score {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+  font-size: 43px;
+}
+
+.col.colButton {
+  margin: 14px;
+}
+
+div .aButton {
+  margin: 21%;
+}
+
+.col.colMode {
+  margin-right: 59px;
+  margin-left: 59px;
+}
+
+.linkMod {
+  margin-right: -100%;
+  margin-left: -100%;
+  color: rgb(83,83,83);
+  font-size: 17px;
+}
+
+@media (min-width: 607px) {
+  .row.text-center.linkMenu {
+    margin-top: 130px;
+  }
+}
+
+@media (max-width: 607px) {
+  .row.text-center.linkMenu {
+    margin-top: 123px;
+  }
+}
+
+.time {
+  animation-duration: 3s;
+}
+

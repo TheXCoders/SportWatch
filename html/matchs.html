@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{{title}}</title>
+    <link rel="icon" type="image/png" href="/static/img/logoSite.png">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900">
+    <link rel="stylesheet" href="/static/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body class="d-flex flex-column justify-content-start align-items-center">
+    <div class="d-flex justify-content-center ellipse-top-container">
+        <div class="d-flex justify-content-center align-items-center ellipse-top"><a href="/matchs/calendrier"><i
+                    class="icon ion-home"></i>Home</a></div>
+    </div>
+    <div class="matches">
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                {% for item in dataMatchs %}
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-6 d-flex justify-content-center"
+                    data-aos="fade-up" data-aos-delay="150" data-aos-once="true">
+                    <div class="d-flex flex-column justify-content-start align-items-center match-card">
+                        <div class="d-flex justify-content-center align-items-center img-container">
+                            <div class="img" style="background-image: url(/static/img/{{item.2}}.png);"></div>
+                            <h1>-</h1>
+                            <div class="img" style="background-image: url(/static/img/{{item.3}}.png);"></div>
+                        </div>
+                        <h1 class="title"> {{item.0}} - {{item.1}} <br></h1>
+                        <h2 class="title">{{item.4}}<br></h2><a href="#">Info sur le match</a>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="d-flex justify-content-center ellipse-bottom-container">
+        <div class="d-flex justify-content-center align-items-center ellipse-bottom"></div>
+    </div>
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/js/bs-animation.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
+</body>
+
+</html>
