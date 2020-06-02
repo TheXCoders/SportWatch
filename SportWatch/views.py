@@ -61,7 +61,8 @@ def calendrierMatches(request, comp):
             matchTime = m[3] + timedelta(hours=2)
         idTeam1 = m[4]
         idTeam2 = m[5]
-        dataMatchs.append((homeTeam, awayTeam, idTeam1, idTeam2, matchTime))
+        matchDay = m[8]
+        dataMatchs.append((homeTeam, awayTeam, idTeam1, idTeam2, matchTime, matchDay))
 
     title = dictNameLeague[comp]
     dbAPI.close()
