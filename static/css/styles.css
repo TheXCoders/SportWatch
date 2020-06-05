@@ -150,7 +150,22 @@ body {
   box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.16);
 }
 
+.stats-card {
+  width: 800px;
+  height: 500px;
+  border-radius: 20px;
+  margin: 30px 10px;
+  background: #fff;
+  box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.16);
+}
+
 .img-container {
+  width: 100%;
+  height: 160px;
+  margin-top: 20px;
+}
+
+.img-container stats-card {
   width: 100%;
   height: 160px;
   margin-top: 20px;
@@ -168,6 +183,14 @@ body {
   background-size: contain;
 }
 
+.stats-card .img-container .img {
+  width: 40%;
+  height: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .match-card h1 {
   font-size: 22px;
   text-align: center;
@@ -175,7 +198,20 @@ body {
   margin-top: 20px;
 }
 
+.stats-card h1 {
+  font-size: 22px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
 .match-card h2 {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.stats-card h2 {
   font-size: 18px;
   text-align: center;
   font-weight: 500;
@@ -196,7 +232,28 @@ body {
   transition: 0.3s;
 }
 
+.stats-card a {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  background: #D8D8D8;
+  width: 235px;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #535353;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
 .match-card a:hover {
+  transition: 0.3s;
+  background: #c8c8c8;
+  color: #434343;
+}
+
+.stats-card a:hover {
   transition: 0.3s;
   background: #c8c8c8;
   color: #434343;
@@ -261,6 +318,9 @@ div .aButton {
   animation-duration: 3s;
 }
 
+.already {
+}
+
 @media (min-width: 600px) {
   .already {
     padding-right: 20px;
@@ -268,125 +328,12 @@ div .aButton {
   }
 }
 
-.register-photo {
-  background: #f1f7fc;
-  padding: 80px 0;
-}
-
-.register-photo .image-holder {
-  display: table-cell;
-  width: auto;
-  background: url(../../assets/img/meeting.jpg);
-  background-size: cover;
-}
-
-.register-photo .form-container {
-  display: table;
-  max-width: 900px;
-  width: 90%;
-  margin: 0 auto;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.1);
-}
-
-.register-photo form {
-  display: table-cell;
-  width: 400px;
-  background-color: #ffffff;
-  padding: 40px 60px;
-  color: #505e6c;
-}
-
-@media (max-width:991px) {
-  .register-photo form {
-    padding: 40px;
+@media (min-width:1200px) {
+  .col-xl-6-stats {
+    -ms-flex: 0 0 80%;
+    flex: 0 0 80%;
+    max-width: 80%;
+    max-height: 10%;
   }
 }
-
-.register-photo form h2 {
-  font-size: 24px;
-  line-height: 1.5;
-  margin-bottom: 30px;
-}
-
-.register-photo form .form-control {
-  background: #f7f9fc;
-  border: none;
-  border-bottom: 1px solid #dfe7f1;
-  border-radius: 0;
-  box-shadow: none;
-  outline: none;
-  color: inherit;
-  text-indent: 6px;
-  height: 40px;
-}
-
-.register-photo form .form-check {
-  font-size: 13px;
-  line-height: 20px;
-}
-
-.register-photo form .btn-primary {
-  background: #f4476b;
-  border: none;
-  border-radius: 4px;
-  padding: 11px;
-  box-shadow: none;
-  margin-top: 35px;
-  text-shadow: none;
-  outline: none !important;
-}
-
-.register-photo form .btn-primary:hover, .register-photo form .btn-primary:active {
-  background: #eb3b60;
-}
-
-.register-photo form .btn-primary:active {
-  transform: translateY(1px);
-}
-
-.register-photo form .already {
-  display: block;
-  text-align: center;
-  font-size: 12px;
-  color: #6f7a85;
-  opacity: 0.9;
-  text-decoration: none;
-}
-
-.form-container.signup {
-  margin-top: 8%;
-}
-
-.btn.btn-primary.btn-block.signup {
-  border-radius: 30px;
-}
-
-.signup {
-  width: 100%;
-  height: 100%;
-}
-
-.form-signup {
-  margin-top: 8%;
-}
-
-.blockSignup {
-  width: 100%;
-  height: 100%;
-}
-
-.fa.fa-soccer-ball-o {
-  font-size: 30px;
-  animation-duration: 2s;
-}
-
-.btn.btn-primary.btn-block.submit {
-  border-radius: 30px;
-}
-
-.matchDay {
-  margin-bottom: 0px;
-  font-size: 18px;
-}
-
 
