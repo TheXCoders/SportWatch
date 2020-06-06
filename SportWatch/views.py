@@ -46,12 +46,12 @@ def calendrierMatches(request, comp):
 
     dataMatchs = list()
     for m in data:
-        homeTeam = m['homeTeam']
-        awayTeam = m['awayTeam']
+        homeTeam    = m['homeTeam']
+        awayTeam    = m['awayTeam']
         urlLogoHome = m['urlLogoHome']
         urlLogoAway = m['urlLogoAway']
-        matchTime = datetime.strptime(m['matchTime'], '%Y-%m-%d %H:%M:%S') + timedelta(hours=2)
-        matchDay = m['matchDay']
+        matchTime   = datetime.strptime(m['matchTime'], '%Y-%m-%d %H:%M:%S') + timedelta(hours=2)
+        matchDay    = m['matchDay']
 
         dataMatchs.append((homeTeam, awayTeam, urlLogoHome, urlLogoAway, matchTime, matchDay))
 
@@ -70,15 +70,16 @@ def resultsMatches(request, comp):
 
     dataMatchs = list()
     for m in data:
-        homeTeam = m['homeTeam']
-        awayTeam = m['awayTeam']
-        matchTime = datetime.strptime(m['matchTime'], '%Y-%m-%d %H:%M:%S') + timedelta(hours=2)
+        homeTeam    = m['homeTeam']
+        awayTeam    = m['awayTeam']
+        matchTime   = datetime.strptime(m['matchTime'], '%Y-%m-%d %H:%M:%S') + timedelta(hours=2)
         urlLogoHome = m['urlLogoHome']
         urlLogoAway = m['urlLogoAway']
-        scoreHome = m['scoreHome']
-        scoreAway = m['scoreAway']
+        scoreHome   = m['scoreHome']
+        scoreAway   = m['scoreAway']
+        matchId = m['matchId']
 
-        dataMatchs.append((homeTeam, awayTeam, urlLogoHome, urlLogoAway, scoreHome, scoreAway, matchTime))
+        dataMatchs.append((homeTeam, awayTeam, urlLogoHome, urlLogoAway, scoreHome, scoreAway, matchTime, matchId))
 
     title = dictNameLeague[comp]
 
@@ -92,15 +93,16 @@ def getInfosLive(comp):
 
     dataArray = list()
     for m in data:
-        homeTeam =    m['homeTeam']
-        awayTeam =    m['awayTeam']
+        homeTeam    = m['homeTeam']
+        awayTeam    = m['awayTeam']
         urlLogoHome = m['urlLogoHome']
         urlLogoAway = m['urlLogoAway']
-        scoreHome = m['scoreHome']
-        scoreAway = m['scoreAway']
-        timeMatch = m['matchTime']
+        scoreHome   = m['scoreHome']
+        scoreAway   = m['scoreAway']
+        timeMatch   = m['matchTime']
+        matchId     = m['matchId']
 
-        dataArray.append((homeTeam, awayTeam, urlLogoHome, urlLogoAway, scoreHome, scoreAway, timeMatch))
+        dataArray.append((homeTeam, awayTeam, urlLogoHome, urlLogoAway, scoreHome, scoreAway, timeMatch, comp, matchId))
         
     return dataArray
 
@@ -118,3 +120,41 @@ def live(request, comp):
         return render(request, "noMatchesLive.html")    
     else:
         return render(request, "matchesLive.html", locals())
+
+def matchStats(request, methode, comp, matchId):
+    rqAPI = requests.get("https://sportwatch-soccer.p.rapidapi.com/getLiveStats/{}/{}".format(comp, matchId), headers=headers)
+
+    data = rqAPI.json()['Results']
+    dataMatchs = list()
+
+    if data != []:
+        homeTeam       = data[0]['homeTeam']      
+        awayTeam       = data[0]['awayTeam']      
+        urlLogoHome    = data[0]['urlLogoHome']   
+        urlLogoAway    = data[0]['urlLogoAway']   
+        scoreHome      = data[0]['scoreHome']     
+        scoreAway      = data[0]['scoreAway']     
+        matchTime      = data[0]['matchTime']     
+        possessionHome = data[0]['possessionHome']
+        possessionAway = data[0]['possessionAway']
+        listGoalHome   = data[0]['listGoalHome']  
+        listGoalAway   = data[0]['listGoalAway']  
+
+        if possessionHome != None:                
+            possessionArray = [possessionHome, possessionAway]
+        else:
+            possessionArray = list()
+
+        labelArray = [homeTeam, awayTeam]
+
+        dataMatchs.append((homeTeam, awayTeam, urlLogoHome, urlLogoAway, scoreHome, scoreAway, 
+                            matchTime, possessionHome, possessionAway, listGoalHome, listGoalAway))
+        
+        if methode == "live":
+            return render(request, "matchesLive-Stats.html", locals())
+        elif methode == "results":
+            return render(request, "matchesResults-Stats.html", locals())
+        else:
+            return render(request, "noMatchesLive.html")
+    else:
+        return render(request, "noMatchesLive.html")

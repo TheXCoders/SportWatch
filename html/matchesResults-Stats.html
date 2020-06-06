@@ -16,7 +16,7 @@
 
 <body class="d-flex flex-column justify-content-start align-items-center">
     <div class="d-flex justify-content-center ellipse-top-container">
-        <div class="d-flex justify-content-center align-items-center ellipse-top"><a href="/matchs/live"><i
+        <div class="d-flex justify-content-center align-items-center ellipse-top"><a href="/matchs/results"><i
                     class="icon ion-home"></i>Home</a></div>
     </div>
     <div class="matches">
@@ -34,8 +34,8 @@
                             <div class="img" style="background-image: url({{item.3}});"></div>
                         </div>
                         <h1 class="title">{{item.0}} - {{item.1}}<br></h1>
-                        <h2 class="flash animated infinite time">{{item.6}}</h2>
-                        <div class="d-flex flex-column justify-content-center align-items-xl-center stats-div" style="width: 100%;">
+                        <div class="d-flex flex-column justify-content-center align-items-xl-center stats-div"
+                            style="width: 100%;">
                             {% if item.8 != None and item.7 != None %}
                             <p style="margin-top: 20px;">Possession :&nbsp;</p>
                             <div><canvas
@@ -46,12 +46,12 @@
                             <div class="d-flex justify-content-xl-center align-items-xl-center" style="width: 100%;">
                                 <ul class="list-unstyled listHome">
                                     {% for but in listGoalHome reversed %}
-                                        <li>{{but.player}} {{but.time}}</li>
+                                    <li>{{but.player}} {{but.time}}</li>
                                     {% endfor %}
                                 </ul>
                                 <ul class="list-unstyled" style="margin-left: 10%;">
                                     {% for but in listGoalAway reversed %}
-                                        <li>{{but.player}} {{but.time}}</li>
+                                    <li>{{but.player}} {{but.time}}</li>
                                     {% endfor %}
                                 </ul>
                             </div>
@@ -67,9 +67,8 @@
     </div>
     <script src="/static/js/jquery.min.js"></script>
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/static/js/bs-init.js"></script>
     <script src="/static/js/chart.min.js"></script>
-    <script src="/static/js/jsLive.js"></script>
+    <script src="/static/js/bs-init.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
 </body>
 

@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.css">
     <link rel="stylesheet" href="/static/css/styles.css">
-    <script src="/static/js/jsLive.js"></script>
 </head>
 
 <body class="d-flex flex-column justify-content-start align-items-center">
@@ -35,7 +34,8 @@
                             <div class="img" style="background-image: url({{item.3}});"></div>
                         </div>
                         <h1 class="title">{{item.0}} - {{item.1}}<br></h1>
-                        <h2 class="flash animated infinite time">{{item.6}}<br></h2><a href="#">Infos le match</a>
+                        <h2 class="flash animated infinite time">{{item.6}}<br></h2>
+                        <a href="/matchs/live/stats/{{item.7}}/{{item.8}}">Infos le match</a>
                     </div>
                 </div>
                 {% endfor %}
@@ -48,6 +48,7 @@
     <script src="/static/js/jquery.min.js"></script>
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
     <script src="/static/js/bs-init.js"></script>
+    <script src="/static/js/jsLive.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.1.1/aos.js"></script>
 </body>
 

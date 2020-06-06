@@ -18,6 +18,7 @@ urlpatterns = [
     path('matchs/results', views.indexResults, name='indexResults'),
     path('matchs/calendrier/<comp>', views.calendrierMatches, name='calendrierMatches'),
     path('matchs/live/<comp>', views.live, name='live'),
-    path('matchs/results/<comp>', views.resultsMatches, name='results')
+    path('matchs/results/<comp>', views.resultsMatches, name='results'),
+    path('matchs/<methode>/stats/<comp>/<matchId>', views.matchStats, name='matchStats')
 #""""
 ]
