@@ -32,7 +32,10 @@
                         </div>
                         <h1 class="title"> {{item.0}} - {{item.1}} <br></h1>
                         <h2 class="title">{{item.4}}<br></h2>
-                        <h4 class="matchDay">J-{{item.5}}</h4><a href="#">Info sur le match</a>
+                        {% if item.5 != 0 %}
+                        <h4 class="matchDay">J-{{item.5}}</h4>
+                        {%endif%}
+                        <a href="#">Info sur le match</a>
                     </div>
                 </div>
                 {% endfor %}
